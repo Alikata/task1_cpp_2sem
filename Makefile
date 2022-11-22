@@ -15,5 +15,14 @@ test_bin: string_view.o test.cpp
 test:
 	./test_bin
 
+int_test:
+	python3 int_test.py
+
+wrapper:
+	$(CC) $(FLAGS) string_view.o test.cpp  -o wrapper $(TEST_LIBS)
+
+main:
+	./wrapper
+
 clean:
 	rm -f *.o main
