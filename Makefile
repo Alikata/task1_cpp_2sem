@@ -2,9 +2,7 @@ CC=g++
 FLAGS=-std=c++20 -Wall -pedantic
 TEST_LIBS=-lgtest_main -lgtest -lpthread
 
-.PHONY: test clean
-
-all: test_bin
+.PHONY: string_view.o test_bin test int_test main clean
 
 string_view.o: string_view.cpp
 	$(CC) $(FLAGS) string_view.cpp -c
@@ -26,3 +24,4 @@ main:
 
 clean:
 	rm -f *.o main
+
