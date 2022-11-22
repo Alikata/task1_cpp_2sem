@@ -1,19 +1,13 @@
 # task1_cpp_2sem
 
-build:
-
-make
-
+### build:
+make  
 make main
 
-unit test:
+### unit test:
+make  
+make test  
 
-make
-
-make test
-
-integration test:
-
-make 
-
+### integration test:
+make  
 make int_test
