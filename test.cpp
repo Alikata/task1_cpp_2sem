@@ -147,6 +147,15 @@ TEST_F(Test_1, test_string_view_eq)
 
 }
 
+TEST_F(Test_1, test_string_ends_with)
+{
+        char etext[] = "!";
+        string_view my_view(etext);
+        std::string_view view(etext);
+        ASSERT_EQ(view.ends_with("he"), my_view.ends_with("he"));
+
+}
+
 int main(int argc, char *argv[])
 {
         ::testing::InitGoogleTest(&argc, argv);
