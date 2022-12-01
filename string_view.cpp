@@ -84,8 +84,8 @@ bool string_view::ends_with(const char* c) const
 
 	for(str_len = 0; c[str_len] != '\0'; ++str_len)
 	{}
-
-	for(size_t i = length-1; (i >= 0) && (i >= length-str_len); --i)
+	if (length < str_len) return false;
+	for(size_t i = length-1; i >= length-str_len; --i)
 		if(c[i-length+str_len] != data[i])
 			ret = false;
 	return ret;
